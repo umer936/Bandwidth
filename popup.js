@@ -1,6 +1,10 @@
-//JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
-var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg"; 
-var downloadSize = 4995374; //bytes
+// Smaller image for testing
+var imageAddr = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"; 
+var downloadSize = 5969; //bytes
+
+// Larger image for more accurate results 
+// var imageAddr = "https://upload.wikimedia.org/wikipedia/commons/4/4b/Catedral_de_Toledo.Altar_Mayor_%28huge%29.jpg"; 
+// var downloadSize = 75797288; //bytes
 
 function ShowProgressMessage(msg) {
     if (console) {
@@ -21,7 +25,7 @@ function ShowProgressMessage(msg) {
 }
 
 function InitiateSpeedDetection() {
-    ShowProgressMessage("Loading the image, please wait...");
+    ShowProgressMessage("Testing speed...");
     window.setTimeout(MeasureConnectionSpeed, 1);
 };    
 
@@ -40,7 +44,7 @@ function MeasureConnectionSpeed() {
     }
     
     download.onerror = function (err, msg) {
-        ShowProgressMessage("Invalid image, or error downloading");
+        ShowProgressMessage("Error testing download");
     }
     
     startTime = (new Date()).getTime();
@@ -55,8 +59,8 @@ function MeasureConnectionSpeed() {
         var speedMbps = (speedKbps / 1024).toFixed(2);
         ShowProgressMessage([
             "Your connection speed is:", 
-            speedBps + " bps", 
-            speedKbps + " kbps", 
+            // speedBps + " bps", 
+            // speedKbps + " kbps", 
             speedMbps + " Mbps"
         ]);
     }
