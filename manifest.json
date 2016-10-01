@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Bandwidth",
+	"description": "Take a speedtest",
+	"icons": {
+		"128": "128.png"
+	},
+	"version": "0.1.0",
+    "browser_action": {
+      "default_icon": "128.png",
+      "default_popup": "popup.html",
+      "default_title": "Take a speedtest"
+    },
+}
