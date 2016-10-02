@@ -1,11 +1,15 @@
 {
 	"manifest_version": 2,
+    "permissions":      [
+    	"geolocation", 
+    	"storage"
+    ],
 	"name": "Bandwidth",
 	"description": "Take a speedtest",
 	"icons": {
 		"128": "128.png"
 	},
-	"version": "0.1.1",
+	"version": "0.2.0",
     "browser_action": {
       "default_icon": "128.png",
       "default_popup": "popup.html",
